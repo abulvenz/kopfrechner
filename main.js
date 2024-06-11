@@ -25,11 +25,18 @@ const tasks = [];
 m.mount(document.body, {
   view: (vnode) => [
     tasks.length === 0
-      ? button({ onclick: () => tasks.push(generators["*"]()) }, "Start")
+      ? button({ onclick: () => range(5).forEach( tasks.push(generators["*"]())) }, "Start")
       : use(tasks[0], ({ op, a, b }) => [a, op, b, "=", br(),
         table(
             range(11).map(i=>tr(
-                range(11).map(j=>td(button.solution[i===j?"middle":""]({onclick:()=>{},style:{cursor:"pointer"}},`${i * (j)}`)))
+                range(11).map(j=>td(button.solution[i===j?"middle":""]({onclick:()=>{
+                    if (tasks.r === tasks.f(i,j)){
+                        tasks.shift();
+                    }
+                    else {
+                        tasks.push(tasks.shift());
+                    }
+                },style:{cursor:"pointer"}},`${i * (j)}`)))
             ))
         )
 

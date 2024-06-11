@@ -2,9 +2,9 @@
   "name": "kopfrechner",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "scripts": {
       "start": "parcel index.html",
+      "gh-page": "rm -rf docs && parcel build index.html --dist-dir=docs --public-url http://abulvenz.github.io/kopfrechner/",
       "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
