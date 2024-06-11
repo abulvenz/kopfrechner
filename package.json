@@ -1,0 +1,20 @@
+{
+  "name": "kopfrechner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+      "start": "parcel index.html",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "mithril": "^2.2.2",
+    "tagl-mithril": "^1.2.2"
+  }
+}
